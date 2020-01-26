@@ -9,3 +9,11 @@ services:
     volumes:
       - /var/www/node_modules
       - .:/var/www
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /var/www/node_modules
+      - .:/var/www
+    command: ["yarn", "test"]
