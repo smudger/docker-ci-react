@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t smudja/docker-ci-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true smudja/docker-ci-react yarn test
