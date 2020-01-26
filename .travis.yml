@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true smudja/docker-ci-react yarn test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-ci-react"
+  env: "DockerCiReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-955871669234"
+  bucket_path: "docker-ci-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
