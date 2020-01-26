@@ -1,3 +1,7 @@
+# docker-ci-react
+
+[![Build Status](https://travis-ci.org/5mudg3r/docker-ci-react.svg?branch=master)](https://travis-ci.org/5mudg3r/docker-ci-react)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
